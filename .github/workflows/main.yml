@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'preprocessing/automate_Reyfaldho_Alfarazel.py'
+      - 'Preprocessing/automate_Reyfaldho_Alfarazel.py'
       - 'requirements.txt'
   workflow_dispatch:
 
@@ -33,12 +33,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run preprocessing script
-        run: python preprocessing/automate_Reyfaldho_Alfarazel.py
+        run: python Preprocessing/automate_Reyfaldho_Alfarazel.py
 
       - name: Commit preprocessed data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: 'preprocessing/dataset_HeartDisease_membangun_sistem_machine_learning_preprocessing.csv'
+          file_pattern: 'Preprocessing/dataset_HeartDisease_membangun_sistem_machine_learning_preprocessing.csv'
           commit_message: '[CI] Auto-generated preprocessed dataset'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
