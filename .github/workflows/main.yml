@@ -38,7 +38,7 @@ jobs:
       - name: Commit preprocessed data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: 'preprocessing/heart_disease_uci_preprocessing.csv'
+          file_pattern: 'preprocessing/dataset_HeartDisease_membangun_sistem_machine_learning_preprocessing.csv'
           commit_message: '[CI] Auto-generated preprocessed dataset'
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
